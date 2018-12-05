@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+	int a[2][3]={{-3,14,5}, {1, -10,8}};
+	int *b[]={a[0],a[1]};
+	int *p=b[1];
+	int ar[]={10,15,4,25,3,-4};
+	int *q;
+	q=&ar[2];
+	printf("%d\n", *b[1]);
+	printf("%d\n", *(++p));
+	printf("%d\n", *(*(a+1)+1));
+	printf("%d\n", *(--p-2));
+	printf("%d\n", *(q+1));
+	printf("%d\n", q[-1]);
+	printf("%d\n", (ar-q));
+	printf("%d\n", ar[*p++]);
+	printf("%d\n", *(ar+ar[2]));
+	return 0;
+}
