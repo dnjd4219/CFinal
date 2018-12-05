@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(){
+        int i, j, *p, *count;
+        srand(time(NULL));
+        printf("국어\n");
+
+        p = (int *)calloc(150, sizeof(int));
+        count = (int *)calloc(50, sizeof(int));
+        for(i=0;i<50;i++){
+                for(j=0;j<4;j++){
+                        if(j<3){
+                                *p = rand()%51+50;
+                                *count += *p;
+                                printf("%5d", *p++);
+                        }
+                        else{
+                                printf("%5d\n", *count++);                       
+                        }
+                }
+        }
+        free(p);
+        free(count);
+        printf("\n");
+
+}
