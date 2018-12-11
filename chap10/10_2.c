@@ -29,7 +29,7 @@ int main(){
     return 0;
 }
 
-void user_upper(char ap, int a){
+void user_upper(char *ap, int a){
     int i;
     for(i=0; i<a; i++){
         if(ap >= 'a' && *ap<='z'){
