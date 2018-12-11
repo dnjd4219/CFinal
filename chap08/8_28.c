@@ -3,7 +3,7 @@
 
 //몫과 나머지를 구하는 함수를 작성하라. 몫은 함수의 결과로 받고 나머지는 포인터로 받도록한다. 
 
-double re(int, int, int *); 
+int re(int, int, int *); 
 
 int main(int argc, char *argv[]) {
 	
@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
-double re(int i, int o, int *w){
+int re(int i, int o, int *w){
 	
 	*w=i%o;
 
